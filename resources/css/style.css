@@ -1,0 +1,456 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;1,400&family=Quicksand:wght@500&display=swap");
+
+* {
+  font-family: "Fira Sans", sans-serif;
+  line-height: 20px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.content {
+  width: 1000px;
+  margin: auto;
+}
+.main {
+  width: 100%;
+}
+nav .content {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #61a3ba;
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+}
+nav .logo {
+  align-items: center;
+  margin-left: 20px;
+}
+nav .logo img {
+  vertical-align: middle;
+  width: 200px;
+  max-width: 100%;
+}
+nav .menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+  max-width: 600px;
+}
+nav .menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav .menu ul li {
+  list-style-type: none;
+  float: left;
+  line-height: 60px;
+}
+nav ul li a {
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  padding: 0px 16px 0px 16px;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #d21e2b;
+}
+.dropdown-menu {
+  position: absolute;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: none;
+}
+.menu ul li:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu ul li {
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+}
+.dropdown-menu ul li a {
+  color: #333;
+  display: block;
+  padding: 5px;
+  line-height: 1.5;
+}
+header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+header .intro {
+  z-index: 100;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: 40%;
+}
+header .intro h3 {
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+header .intro p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+header .headhome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: #0f2027;
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+}
+.button {
+  color: white;
+  height: 40px;
+  line-height: 42px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0px 20px 0px 20px;
+  font-size: 15px;
+  transition-duration: 0.4s;
+  border: 1px solid #d21e2b;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.button:hover {
+  background-color: #d21e2b;
+  color: white;
+}
+.menu-toggle {
+  position: absolute;
+  top: 1.7rem;
+  right: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+.menu-toggle .bar {
+  height: 3px;
+  background-color: black;
+}
+#aboutus {
+  background-color: #f5f6f6;
+}
+#aboutus .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#aboutus .aboutus-info {
+  flex: 1;
+  padding: 20px;
+}
+#aboutus .aboutus-info h3 {
+  font-size: 30px;
+  text-align: center;
+}
+#aboutus .aboutus-info h3::after {
+  content: "";
+  border-bottom: 5px solid #d21e2b;
+  width: 100px;
+  display: block;
+  margin: 20px auto;
+}
+#aboutus .aboutus-image {
+  flex: 1;
+  text-align: center;
+}
+#aboutus .aboutus-image img {
+  max-width: 100%;
+  height: auto;
+}
+section {
+  padding: 50px 0px 50px 0px;
+}
+section h3 {
+  font-size: 30px;
+}
+section h3::after {
+  content: "";
+  border-bottom: 5px solid #d21e2b;
+  width: 52px;
+  display: block;
+  margin: 20px auto;
+}
+.card {
+  flex: 0 0 calc(25% - 20px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  margin: 10px;
+  text-align: center;
+}
+.card img {
+  object-fit: cover;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: grey;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+.card button:hover {
+  background-color: #d21e2b;
+}
+.kelas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#product,
+#team,
+#testimonial {
+  text-align: center;
+}
+section p.ringkasan {
+  font-style: italic;
+  font-size: 18px;
+  color: #ababab;
+}
+section.abuabu {
+  background-color: #f5f6f6;
+}
+.support,
+.tim,
+.testimonial {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.support h6,
+.tim h6 {
+  margin: 0px;
+  margin-top: 20px;
+  padding: 0px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.support img {
+  width: 50px;
+}
+.support div,
+.tim div {
+  text-align: center;
+  width: 26%;
+}
+.tim img {
+  width: 100%;
+  box-shadow: 0px -10px 30px #ccc;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.testimonial .area {
+  width: 47%;
+  box-shadow: 0px -10px 30px #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.testimonial div.area div {
+  width: 50%;
+}
+.testimonial .area .gambar {
+  border-radius: 5px 0px 0px 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 310px;
+}
+.testimonial .area .text article {
+  padding: 40px;
+}
+.testimonial .area .text article h4 {
+  margin: 0px;
+}
+footer {
+  padding: 50px 0px 50px 0px;
+  background: #bdc3c7;
+  background: linear-gradient(to right, #2c3e50, #bdc3c7);
+  color: #fff;
+}
+footer .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer .content div {
+  width: 20%;
+}
+footer .content h5 {
+  margin-top: 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+footer .content .copyright {
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #666;
+  text-align: center;
+}
+
+main aside {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  padding: 1.5rem 1rem;
+  margin: auto;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+main aside .contact-sosmed ul {
+  padding: 1.5rem 1rem;
+  margin: auto;
+}
+main aside .contact-sosmed li {
+  list-style-type: none;
+}
+@media screen and (max-width: 991.98px) {
+  .content {
+    width: 90%;
+  }
+  #aboutus .content {
+    flex-direction: column;
+    text-align: center;
+  }
+  #aboutus .aboutus-info,
+  #aboutus .aboutus-image {
+    width: 100%;
+    padding: 20px;
+  }
+  #aboutus .aboutus-info h3 {
+    text-align: center;
+  }
+  .testimonial .area {
+    display: block;
+  }
+  .testimonial div.area div {
+    width: 100%;
+  }
+  .testimonial .area .gambar {
+    border-radius: 5px;
+    height: 200px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+  .support {
+    display: block;
+  }
+  .support div {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  .card {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+@media screen and (max-width: 834px) {
+  nav .content {
+    width: 100%;
+  }
+  nav .logo {
+    text-align: center;
+  }
+  nav .menu ul {
+    display: none;
+    margin-top: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  nav .menu ul li {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    line-height: 40px;
+  }
+  nav .menu ul li a {
+    color: #333;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
+@media screen and (max-width: 576px) {
+  header .intro h3 {
+    font-size: 30px;
+  }
+  .intro p {
+    padding: 0 10px;
+  }
+  .content {
+    width: 100%;
+  }
+  .button {
+    font-size: 14px;
+  }
+  .headhome {
+    background-size: cover;
+  }
+  footer .content div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
